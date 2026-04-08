@@ -1,8 +1,12 @@
 # Requirements Specification
 
 ## 1. System Overview
-O Fostudy é um aplicativo voltado para estudantes do Ensino Médio e vestibulandos do ENEM, que buscam melhorar sua organização, foco e desempenho acadêmico. A plataforma integra ferramentas como cronograma de estudos, método Pomodoro, flashcards, métricas de desempenho, sistema de alertas e elementos de gamificação.
-O objetivo principal do sistema é auxiliar o usuário a planejar seus estudos, manter constância e revisar conteúdos de forma eficiente, tornando o processo mais produtivo e motivador.
+O FoStudy é um aplicativo voltado para estudantes que enfrentam dificuldades na organização dos estudos, foco e baixa constância ao longo do tempo. Muitos usuários apresentam desafios no gerenciamento de tarefas, na realização de revisões eficientes e na manutenção da disciplina, o que impacta diretamente seu desempenho acadêmico.
+
+Com o objetivo de mitigar esses problemas, o FoStudy oferece uma plataforma integrada que reúne funcionalidades como agenda, cronograma de estudos, método Pomodoro, flashcards, métricas de desempenho, sistema de alertas e elementos de gamificação. Essas ferramentas atuam de forma complementar, auxiliando o estudante no planejamento, execução e acompanhamento de seus estudos de maneira estruturada e contínua.
+
+O público-alvo do sistema é composto por estudantes do ensino médio e vestibulandos que estão se preparando para o ENEM, e que buscam aprimorar sua organização, produtividade e desempenho acadêmico.
+
 
 ## 2. Functional Requirements
 
