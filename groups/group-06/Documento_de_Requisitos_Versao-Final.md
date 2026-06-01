@@ -511,7 +511,7 @@ O sistema deve permitir que o usuário edite seus dados de perfil.
 ### 5.1 Usabilidade
 - O sistema deve apresentar uma interface intuitiva e de fácil navegação, adequada ao público estudantil. 
 
-- As principais funcionalidades devem ser acessadas em até 5 interações do usuário. 
+- O sistema deve permitir que as principais funcionalidades sejam acessadas em até 5 interações do usuário. 
 
 - O sistema deve fornecer feedback visual imediato após ações realizadas. 
 
@@ -520,7 +520,7 @@ O sistema deve permitir que o usuário edite seus dados de perfil.
 - O sistema deverá possuir um botão de acessibilidade localizado na lateral direita da interface, permitindo ativar recursos de leitura por voz para usuários com deficiência visual e suporte em Libras para usuários com deficiência auditiva ou de fala.
 
 ### 5.2 Eficiência  
-- Suporte a múltiplos usuários  
+- O sistema deve oferecer suporte a múltiplos usuários simultaneamente.  
 - O aplicativo deve responder rapidamente às ações do usuário para evitar atrasos durante o uso
 - O aplicativo deve minimizar o consumo de bateria durante o uso contínuo
   
@@ -529,29 +529,29 @@ O sistema deve permitir que o usuário edite seus dados de perfil.
 
 - O timer do Método Pomodoro deve iniciar ou pausar em no máximo 300ms após o comando do usuário, garantindo precisão imediata nas sessões de foco.
 
-- Para manter o fluxo de aprendizado sem interrupções, os Flashcards devem carregar e exibir seu conteúdo em até 1 segundo.
+- O sistema deve carregar e exibir o conteúdo dos Flashcards em até 1 segundo, garantindo a continuidade do fluxo de aprendizado.
 
-- O relatório de métricas de estudo deve ser gerado e exibido em até 1,5 segundos se os dados estiverem em cache local, ou até 3 segundos mediante o uso de uma animação de carregamento para otimizar a percepção de espera.
+- O sistema deve gerar e exibir o relatório de métricas de estudo em até 1,5 segundos quando os dados estiverem em cache local, ou em até 3 segundos mediante a utilização de uma animação de carregamento.
 
-- Em termos de escalabilidade, a infraestrutura do backend deve suportar 10.000 usuários simultâneos sem qualquer degradação de performance.
+- O sistema deve suportar 10.000 usuários simultâneos em sua infraestrutura de backend sem degradação de desempenho.
 
 - O sistema deve ser capaz de absorver picos de até 15.000 usuários simultâneos por períodos de até 10 minutos, garantindo a estabilidade em momentos de alta demanda.
 
 - O sistema de alertas deve ser altamente confiável, disparando notificações com uma tolerância máxima de atraso de apenas 5 segundos em relação ao horário configurado pelo estudante.
 
-- No que diz respeito ao Mini Game, o desempenho gráfico deve ser estável, mantendo uma taxa de atualização mínima de 30 FPS em dispositivos Android 8+ ou iOS 13+.
+- O sistema deve manter o desempenho gráfico do Mini Game com uma taxa mínima de atualização de 30 FPS em dispositivos Android 8+ ou iOS 13+.
 
 - O aplicativo deve permitir o funcionamento pleno em modo offline para as funções de cronograma, flashcards e Pomodoro, garantindo a continuidade dos estudos sem internet.
 
-- O tamanho total do pacote de instalação (APK/IPA) deve ser mantido em até 80MB, utilizando técnicas de compressão de assets, especialmente para os elementos do mini game.
-
+- O sistema deve manter o tamanho total do pacote de instalação (APK/IPA) em até 80 MB, utilizando técnicas de compressão de recursos, especialmente para os elementos do Mini Game.
+- 
 - O sistema deve garantir a acessibilidade, sendo totalmente compatível com leitores de tela e seguindo padrões de contraste WCAG 2.1 para assegurar a inclusão de todos os usuários  
 
 ### 5.4 Espaço
-- Limite de armazenamento  
-- Uso eficiente de memória
-- Recursos não utilizados devem ser liberados automaticamente
-- O minigame não deve comprometer funções principais do app
+- O sistema deve respeitar limites predefinidos de armazenamento para garantir seu funcionamento adequado. 
+- O sistema deve utilizar a memória de forma eficiente durante sua execução.
+- O sistema deve liberar automaticamente os recursos que não estiverem em uso.
+- O sistema deve garantir que o Mini Game não comprometa o funcionamento das funcionalidades principais do aplicativo.
 
 ### 5.5 Confiabilidade  
 - O sistema deve realizar salvamento automático
