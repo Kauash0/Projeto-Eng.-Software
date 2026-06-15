@@ -626,24 +626,107 @@ autorizados.
 ##  8. Arquitetura do Sistema
 
 ### 8.1 Visão Geral
-Descreva a arquitetura (ex: monolito, microserviços).
+O CromStudy utilizará uma arquitetura monolítica modular, composta por um único backend responsável por gerenciar todas as funcionalidades do sistema, como autenticação, agenda, cronograma, flashcards, método Pomodoro, métricas de estudo, sistema de alertas e mini game. Essa arquitetura foi escolhida por apresentar menor complexidade de desenvolvimento e manutenção quando comparada a uma arquitetura de microsserviços, Além disso, permite uma implementação mais rápida, reduz custos de infraestrutura e facilita a comunicação entre os módulos do sistema. 
+
+As três camadas principais da arquitetura:
+
+- **Front End**: responsável pela interface do usuário nas versões mobile e web.
+- **Back End**: responsável pelas regras de negócio, autenticação, processamento de dados e comunicação com o banco de dados.
+- **Banco de Dados**: responsável pelo armazenamento persistente das informações do sistema.
+
+---
 
 ### 8.2 Componentes
-- Frontend  
-- Backend  
-- Banco de dados  
-- APIs externas  
+**Frontend**
+
+Reponsável por:
+- Cadastro e login de usuários;
+- Gerenciamento da agenda e cronograma;
+- Criação e revisão de flashcards;
+- Controle do cronômetro Pomodoro;
+- Visualização das métricas de estudo;
+- Exibição de notificações e alertas;
+- Acesso ao mini game educativo;
+- Exibição de relatórios e estatísticas de desempenho.
+---
+**Backend**
+
+Responsável por:
+- Autenticação e autorização de usuários;
+- Gerenciamento de sessões;
+- Processamento das regras de agenda e cronograma;
+- Controle dos flashcards;
+- Registro das sessões de estudo;
+- Cálculo de métricas e estatísticas;
+- Gerenciamento das notificações;
+- Controle da pontuação e progressão do mini game;
+- Comunicação com o banco de dados.
+---
+**Banco de dados**
+
+Responsável por armazenar:
+- Usuários;
+- Perfis;
+- Cronogramas;
+- Eventos da agenda;
+- Flashcards;
+- Sessões Pomodoro;
+- Estatísticas de estudo;
+- Pontuações e conquistas;
+- Configurações de notificações.
+---
+**APIs externas**
+
+Integrações:
+- Google OAuth 2.0: Para realizar o login com conta google.
+- Firebase Cloud Messaging: Para envio de notificações push;
+- SendGrid / AWS SES: Para o envio de e-mails transacionais, como verificação de conta, recuperação de senha, relatórios semanais.
+
+---
 
 ### 8.3 Tecnologias
-- Linguagem  
-- Framework  
-- Banco de dados  
+**Linguagem**
+- TypeScript: Para Frontend e Backend.
+
+**Framework**
+- React Native: Para desenvolver aplicativos Android e iOS utilizando uma única base de código;
+- React: Para criar partes visuais interativas e dinâmicas do site;
+- NestJs: Para o desenvolvimento do Backend;
+- Prisma ORM: Para facilitar a comunicação entre o Backend e o banco de dados.
+
+**Banco de dados**
+- PostgreSQL: Por ser gratuito, robusto e seguro;
+- SQlite: Para o banco de dados local no dispositivo do usuário.
+
+**Outras Tecnologias Relevantes**
+- Tailwind CSS: Para estilização Web.
+- Git e GitHub: Para o controle das versões e colaboração da equipe.
+
+---
 
 ### 8.4 Decisões Arquiteturais
-Explique como a arquitetura atende aos requisitos não funcionais:
-- Desempenho  
-- Segurança  
-- Escalabilidade  
+
+**Desempenho**
+
+A arquitetura monolítica modular reduz a sobrecarga de comunicação entre serviços, permitindo respostas mais rápidas para as operações do sistema. O uso do PostgreSQL proporciona consultas eficientes e alta performance para armazenamento dos dados acadêmicos. Além disso, a utilização de React e React Native possibilita interfaces rápidas e responsivas.
+
+---
+**Segurança**
+
+A segurança será garantida através de:
+
+- Autenticação utilizando JWT;
+- Criptografia de senhas com algoritmos de hash seguros;
+- Controle de acesso baseado em usuários autenticados;
+- Comunicação protegida por HTTPS;
+- Validação de dados recebidos pela API;
+- Proteção contra ataques comuns, como SQL Injection e Cross-Site Scripting (XSS).
+---
+**Escalabilidade**
+
+Embora a arquitetura inicial seja monolítica, sua organização modular permitirá crescimento futuro sem necessidade de reestruturação completa.
+
+A aplicação poderá ser escalada verticalmente (aumento de recursos do servidor) ou horizontalmente (múltiplas instâncias da aplicação). Além disso, a separação clara entre frontend, backend e banco de dados facilita futuras migrações para arquiteturas mais complexas, caso o número de usuários aumente significativamente.
 
 ---
 
